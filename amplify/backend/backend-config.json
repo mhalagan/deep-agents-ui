@@ -1,0 +1,22 @@
+{
+  "auth": {
+    "deepagentsui": {
+      "build": true,
+      "config": {
+        "loginMechanisms": [
+          "email"
+        ],
+        "signupAttributes": [
+          "email"
+        ],
+        "passwordRequirements": {
+          "minLength": 8,
+          "requireLowercase": true,
+          "requireUppercase": true,
+          "requireNumbers": true,
+          "requireSpecialCharacters": true
+        }
+      }
+    }
+  }
+}
