@@ -4,6 +4,9 @@ import { AuthProvider } from "@/providers/Auth";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 import "./globals.css";
+import "@aws-amplify/ui-react/styles.css";
+import "@/lib/amplify-config";
+import { AmplifyGate } from "./components/AmplifyGate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          <NuqsAdapter>{children}</NuqsAdapter>
+          <NuqsAdapter>
+            <AmplifyGate>
+              {children}
+            </AmplifyGate>
+          </NuqsAdapter>
           <Toaster position="top-right" />
         </AuthProvider>
       </body>
