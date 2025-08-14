@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-deepagentsui-dev-authRole",
+      "UnauthRoleArn": "arn:aws:iam::ACCOUNT_ID:role/amplify-deepagentsui-dev-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::ACCOUNT_ID:role/amplify-deepagentsui-dev-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-deepagentsui-dev-deployment",
+      "UnauthRoleName": "amplify-deepagentsui-dev-unauthRole",
+      "StackName": "amplify-deepagentsui-dev",
+      "StackId": "arn:aws:cloudformation:us-east-1:ACCOUNT_ID:stack/amplify-deepagentsui-dev/STACK_ID"
+    }
+  }
+}
