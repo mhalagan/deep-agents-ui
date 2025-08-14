@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { AuthProvider } from "@/providers/Auth";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
+import "@/lib/amplify"; // Import Amplify configuration
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
