@@ -28,7 +28,13 @@ NEXT_PUBLIC_AGENT_ID=<your agent ID from langgraph.json>
 NEXT_PUBLIC_LANGSMITH_API_KEY=<langsmith-api-key>
 ```
 
+### Using AWS Amplify (optional)
 
+This project can be deployed with AWS Amplify Hosting and use Amplify Auth.
+
+- **Enable Amplify Auth UI**: set `NEXT_PUBLIC_ENABLE_AMPLIFY_AUTH=true` in `.env`.
+- **Amplify outputs**: Amplify Hosting will provide `amplify_outputs.json` at the repo root during build. A local placeholder exists for development.
+- **Local development**: If not signed in with Amplify, the app falls back to `NEXT_PUBLIC_LANGSMITH_API_KEY` for `accessToken`.
 
 Once you have your environment variables set, install all dependencies and run your app.
 
@@ -36,6 +42,5 @@ Once you have your environment variables set, install all dependencies and run y
 npm install
 npm run dev
 ```
-
 
 Open [http://localhost:3000](http://localhost:3000) to test out your deep agent!
