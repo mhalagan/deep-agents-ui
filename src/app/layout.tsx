@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AuthProvider } from "@/providers/Auth";
+import { AmplifyProvider } from "@/providers/Amplify";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -20,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <NuqsAdapter>{children}</NuqsAdapter>
-          <Toaster position="top-right" />
-        </AuthProvider>
+        <AmplifyProvider>
+          <AuthProvider>
+            <NuqsAdapter>{children}</NuqsAdapter>
+            <Toaster position="top-right" />
+          </AuthProvider>
+        </AmplifyProvider>
       </body>
     </html>
   );
